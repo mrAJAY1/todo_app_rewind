@@ -4,6 +4,7 @@
   padding: 10px;
   border: 1px solid #2c2c2c;
   margin-top: 20px;
+  transition: 1s;
   .text_container {
     width: 100%;
     display: flex;
@@ -28,4 +29,5 @@
   input[type="checkbox"] {
     width: 25px;
   }
+
 }
