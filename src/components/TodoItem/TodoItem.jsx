@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Styles from "./TodoItem.module.scss";
 
-function TodoItem({ todoData, completeTask, count }) {
+function TodoItem({ todoData, completeTask, count, setShouldShake }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => {
@@ -11,7 +11,11 @@ function TodoItem({ todoData, completeTask, count }) {
 
   useEffect(() => {
     if (isChecked) {
-      const timerId = setTimeout(() => completeTask(todoData.id), 1000);
+      setShouldShake(true);
+      const timerId = setTimeout(() => {
+        completeTask(todoData.id);
+        setShouldShake(false);
+      }, 1000);
       return () => clearTimeout(timerId);
     }
   }, [isChecked, completeTask, todoData.id]);
@@ -47,6 +51,7 @@ TodoItem.propTypes = {
   }).isRequired,
   completeTask: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
+  setShouldShake: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
