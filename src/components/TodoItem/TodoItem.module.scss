@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  border: 1px solid #2c2c2c;
+  margin-top: 20px;
+  .text_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 20px;
+    div {
+      width: 100%;
+      margin-left: 20px;
+      padding-right: 20px;
+      p.todo_text {
+        font-size: 1.2em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: "kanit", sans-serif;
+        font-weight: lighter;
+        letter-spacing: 0.1ch;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    width: 25px;
+  }
+}

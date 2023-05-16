@@ -1,24 +1,22 @@
-.container {
+.form {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 30px;
-}
-.form {
-  width: 450px;
-  display: flex;
   button[type="submit"] {
+    width: 30%;
     border: none;
     border-radius: 0;
     padding: 10px 20px;
     box-sizing: border-box;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
   input {
     border: none;
     width: 70%;
+    padding: 0 10px 0 10px;
+    &:focus {
+      outline: none;
+    }
   }
 }

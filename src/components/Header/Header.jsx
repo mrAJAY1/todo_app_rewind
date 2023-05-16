@@ -1,4 +1,5 @@
-import Style from "./Header.module.css";
+import React from "react";
+import Style from "./Header.module.scss";
 
 function Header() {
   return (

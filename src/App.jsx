@@ -1,12 +1,13 @@
 import React from "react";
-import "./App.css";
-import { Header, TodoForm } from "./components";
+import { Header, TodoBody, TodoForm } from "./components";
+import "./App.scss";
 
 function App() {
   return (
     <div className="app">
       <Header />
       <TodoForm />
+      <TodoBody />
     </div>
   );
 }

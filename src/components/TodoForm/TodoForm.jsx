@@ -3,7 +3,7 @@ import Style from "./Todoform.module.scss";
 
 function TodoForm() {
   return (
-    <div className={Style.container}>
+    <div className="container mt-30">
       <form
         action=""
         onSubmit={(e) => e.preventDefault()}
