@@ -4,7 +4,7 @@
   padding: 10px;
   border: 1px solid #2c2c2c;
   margin-top: 20px;
-  transition: 1s;
+  transition: 1s ease-in;
   .text_container {
     width: 100%;
     display: flex;
@@ -34,3 +34,4 @@
   .hideSlowly{
     opacity: 0;
   }
+ 
