@@ -17,7 +17,7 @@ function TodoItem({ todoData, completeTask, count }) {
   }, [isChecked, completeTask, todoData.id]);
 
   return (
-    <div className={Styles.container}>
+    <div className={`${Styles.container} ${isChecked && Styles.hideSlowly}`}>
       <div className={Styles.text_container}>
         <h3>{count}</h3>
         <div>
