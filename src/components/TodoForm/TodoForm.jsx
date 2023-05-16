@@ -11,8 +11,10 @@ function TodoForm({ updateList }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateList(userInput);
-    setUserInput("");
+    if (userInput !== "") {
+      updateList(userInput);
+      setUserInput("");
+    }
   };
 
   return (
